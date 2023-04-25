@@ -92,6 +92,26 @@ export default function NavBar() {
             >
               <NextLink href="/campaign/new">Create Campaign</NextLink>
             </Button>
+            {wallet.status === "connected" && (
+              <>
+            <Button
+              fontSize={"md"}
+              fontWeight={600}
+              variant={"link"}
+              display={{ base: "none", md: "inline-flex" }}
+            >
+              <NextLink href="/campaign/my">My Campaign</NextLink>
+            </Button>
+            <Button
+            fontSize={"md"}
+            fontWeight={600}
+            variant={"link"}
+            display={{ base: "none", md: "inline-flex" }}
+          >
+            <NextLink href="/campaign/contribution">My Contribution</NextLink>
+          </Button>
+          </>
+            )}
             <Button
               fontSize={"md"}
               fontWeight={600}
